@@ -1,6 +1,7 @@
 # 📊 Calculadora Web de Ingeniería Económica
 
 Este proyecto fue desarrollado como entrega final para la asignatura **Ingeniería Económica**, integrando conocimientos adquiridos a lo largo del curso con habilidades de desarrollo web como estudiante de **Ingeniería Telemática**.
+Este proyecto representa el uso consciente de herramientas de inteligencia artificial **ChatGPT** como apoyo al aprendizaje, reforzando la lógica, el análisis crítico y la aplicación de conceptos técnicos en soluciones prácticas. Aunque las funciones fueron generadas con su ayuda, **el análisis, la integración y la lógica del sistema fueron realizados manualmente**, aplicando criterio, conocimiento matemático y competencias propias de la materia.
 
 ## ✨ Funcionalidades implementadas
 
@@ -20,10 +21,6 @@ Esta calculadora reúne múltiples herramientas útiles en el análisis financie
   - Abono reduciendo el tiempo
   - Abono reduciendo la cuota
 - **Tabla de capitalización**
-
-Este proyecto representa el uso consciente de herramientas de inteligencia artificial **ChatGPT** como apoyo al aprendizaje, reforzando la lógica, el análisis crítico y la aplicación de conceptos técnicos en soluciones prácticas. Aunque las funciones fueron generadas con su ayuda, **el análisis, la integración y la lógica del sistema fueron realizados manualmente**, aplicando criterio, conocimiento matemático y competencias propias de la materia.
----
-
 
 ## 🚀 Ejecución del proyecto
 
