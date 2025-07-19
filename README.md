@@ -1,8 +1,8 @@
-# Calculadora Web de Ingeniería Económica
+# 📊 Calculadora Web de Ingeniería Económica
 
 Este proyecto fue desarrollado como entrega final para la asignatura **Ingeniería Económica**, integrando conocimientos adquiridos a lo largo del curso con habilidades de desarrollo web como estudiante de **Ingeniería Telemática**.
 
-## Funcionalidades implementadas
+## ✨ Funcionalidades implementadas
 
 Esta calculadora reúne múltiples herramientas útiles en el análisis financiero, entre ellas:
 
@@ -21,19 +21,11 @@ Esta calculadora reúne múltiples herramientas útiles en el análisis financie
   - Abono reduciendo la cuota
 - **Tabla de capitalización**
 
-Estas funcionalidades fueron desarrolladas con el acompañamiento de  **ChatGPT (IA)**, siendo utilizado como herramienta técnica y conceptual. Aunque las funciones fueron generadas con la ayuda de inteligencia artificial, **el análisis, la integración y la lógica del sistema fueron realizados manualmente**, aplicando criterio, conocimiento matemático y competencias propias de la materia.
-
+Este proyecto representa el uso consciente de herramientas de inteligencia artificial **ChatGPT** como apoyo al aprendizaje, reforzando la lógica, el análisis crítico y la aplicación de conceptos técnicos en soluciones prácticas. Aunque las funciones fueron generadas con su ayuda, **el análisis, la integración y la lógica del sistema fueron realizados manualmente**, aplicando criterio, conocimiento matemático y competencias propias de la materia.
 ---
 
-## ⚙️ Estructura del proyecto
 
-Este proyecto tiene una estructura simple y orientada al uso inmediato en el navegador. Incluye HTML, CSS y JavaScript puros.
-
-Algunas dependencias externas como **Bootstrap**, **jQuery**, **Bootstrap Icons** y fuentes se encuentran **excluidas del repositorio** (`.gitignore`), pero puedes descargarlas automáticamente al clonar el proyecto.
-
----
-
-## Ejecución del proyecto
+## 🚀 Ejecución del proyecto
 
 ### 1. Clona este repositorio
 
@@ -46,14 +38,19 @@ cd JS-C_Financiera
 Ejecuta el script en Git Bash, Linux o Mac (requiere `curl`):
 
 ```bash
-bash descargar-dependencias.sh
+bash install-deps.sh
 ```
 
-## Consideraciones
+### 3. Consideraciones para previsualizar el proyecto localmente
+Usar un servidor local con Python, Abre una terminal en la carpeta raíz del proyecto y ejecuta el siguiente comando:
 
-- El proyecto puede ejecutarse directamente abriendo el archivo `index.html` en un navegador.
+```bash
+python -m http.server
+```
+Y por último abre tu navegador y visita: http://localhost:8000
 
 
-## Licencia
+
+## 📜 Licencia
 
 Este proyecto puede ser utilizado libremente con fines académicos y educativos.
