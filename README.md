@@ -1,8 +1,8 @@
-# 📊 Calculadora Web de Ingeniería Económica
+# Calculadora Web de Ingeniería Económica
 
 Este proyecto fue desarrollado como entrega final para la asignatura **Ingeniería Económica**, integrando conocimientos adquiridos a lo largo del curso con habilidades de desarrollo web como estudiante de **Ingeniería Telemática**.
 
-## ✨ Funcionalidades implementadas
+## Funcionalidades implementadas
 
 Esta calculadora reúne múltiples herramientas útiles en el análisis financiero, entre ellas:
 
@@ -33,7 +33,7 @@ Algunas dependencias externas como **Bootstrap**, **jQuery**, **Bootstrap Icons*
 
 ---
 
-## 🚀 Ejecución del proyecto
+## Ejecución del proyecto
 
 ### 1. Clona este repositorio
 
@@ -49,11 +49,11 @@ Ejecuta el script en Git Bash, Linux o Mac (requiere `curl`):
 bash descargar-dependencias.sh
 ```
 
-## 💡 Consideraciones
+## Consideraciones
 
 - El proyecto puede ejecutarse directamente abriendo el archivo `index.html` en un navegador.
 
 
-## 📜 Licencia
+## Licencia
 
 Este proyecto puede ser utilizado libremente con fines académicos y educativos.
