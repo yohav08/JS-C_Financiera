@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>JS-C. Financiera</title>
+        <link rel="icon" href="/images/icono.png" type="image/x-icon" />
+
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/templatemo-topic-listing.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/Styles.css">
+<!--
+
+TemplateMo 590 topic listing
+
+https://templatemo.com/tm-590-topic-listing
+
+-->
+    </head>
+
+    <body id="top">
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="bi-back"></i>
+                        <span>JS-CJSA</span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_1">Inicio</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <h1 class="text-white text-center">Proyecto Ingeniería Económica</h1> <br>
+                            <h6 class="text-white text-center" style="text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.538)">Alba Yohana Avila Mendoza</h6>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 1.Reparto Proporcional -->
+            <section class="featured-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-8 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block bg-white shadow-lg">
+
+                                <div class="d-flex">
+                                    <div>
+                                        <h2 class="mb-2 text-center">Reparto Proporcional</h2>
+                                        <div class="container text-center">
+                                            <form id="form">
+                                            <label for="type">Tipo de reparto:</label>
+                                            <select id="type" name="type">
+                                                <option value="directo-simple">Directo Simple</option>
+                                                <option value="directo-compuesto">Directo Compuesto</option>
+                                                <option value="inverso-simple">Inverso Simple</option>
+                                                <option value="inverso-compuesto">Inverso Compuesto</option>
+                                                <option value="mixto">Mixto</option>
+                                            </select>
+
+                                            <br><label for="method">Método:</label>
+                                            <select id="method" name="method">
+                                                <option value="unidad">Reducción a la unidad</option>
+                                                <option value="proporciones">Proporciones</option>
+                                                <option value="alicuotas">Partes alícuotas</option>
+                                            </select>
+
+                                            <br><label for="total">Cantidad total a repartir:</label>
+                                            <input type="number" id="total" name="total" placeholder="Ej: 10000000" required>
+                                            <br><br>
+                                            <div style="display: inline-block;" id="indices-container">
+                                                <!-- Se agregan aquí los bloques dinámicos -->
+                                            </div>
+
+                                            <br><button type="button" id="add"> Agregar índices</button>
+                                            <button type="submit">Calcular Reparto</button>
+                                            </form>
+
+                                            <div style="display: block;" id="output_1"></div>
+                                        </div>
+                                        <p style="visibility: collapse;" class="mb-2">When you search for free CSS templates, you will notice that TemplateMo is one of the best websites.</p>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2.Interés Simple -->
+            <section class="explore-section section-padding" id="section_2">
+                <div class="container">
+                    <div class="col-12 text-center">
+                        <h2 class="mb-4">Interés Simple</h1><hr>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                       <!-- CONTENIDO DE INTERÉS SIMPLE -->
+                        <div>
+                            <h5 class="text-white mb-2">Interés y Descuento</h5>
+
+                            <div class="container text-center">
+
+                                <form id="interesForm">
+                                <p style="color: black;">Capital (P): <input type="number" id="capital" required placeholder="Ej:100000000"></p>
+                                <p style="color: black;">Tasa de Interés (%) Anual: <input type="number" id="tasa" step="0.01" required placeholder="Ej:10"></p>
+
+                                <h5 class="mb-2">Modo de Cálculo</h5>
+                                <label style="font-size: 1.7cap;"><input type="radio" name="modo" value="mes" checked> Por mes y año</label>
+                                <label style="font-size: 1.7cap;"><input type="radio" name="modo" value="fechas"> Por rango de fechas</label>
+
+                                <div  id="porMes">
+                                    <label>Mes:
+                                    <select id="mes">
+                                        <option value="1">Enero</option><option value="2">Febrero</option><option value="3">Marzo</option>
+                                        <option value="4">Abril</option><option value="5">Mayo</option><option value="6">Junio</option>
+                                        <option value="7">Julio</option><option value="8">Agosto</option><option value="9">Septiembre</option>
+                                        <option value="10">Octubre</option><option value="11">Noviembre</option><option value="12">Diciembre</option>
+                                    </select>
+                                    </label>
+                                    <label>Año: <input type="number" id="anioMes" value="2024" required></label>
+                                </div>
+
+                                <div id="porFechas" style="display: none;">
+                                    <label>Desde: <input type="date" id="desde"></label>
+                                    <label>Hasta: <input type="date" id="hasta"></label>
+                                </div>
+
+                                <button type="submit">Calcular Intereses</button>
+                                </form>
+
+                                <div id="resultado2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <!-- 3.Descuento -->
+            <section class="timeline-section section-padding" id="section_3">
+                <div class="section-overlay"></div>
+
+                <div class="container">
+                    <div class="row text-white text-center">
+
+                        <div class="col-12 text-center">
+                            <h2 class="text-white  mb-4">Descuento</h1>
+                        </div>
+                        <form id="discountForm" class="fs-6">
+                            <label for="valorFuturo">Valor Futuro (S):</label>
+                            <input type="number" id="valorFuturo" placeholder="1000000" required />
+
+                            <br><label for="tasaDescuento">Tasa de Descuento % - (d):</label>
+                            <input type="number" step="0.01" id="tasaDescuento" placeholder="20" />
+                            <br><br>
+                            <label for="fechaInicio_3">Fecha de Inicio:</label>
+                            <input type="date" id="fechaInicio_3" required />
+
+                            <label for="fechaFin_3">Fecha de Fin:</label>
+                            <input type="date" id="fechaFin_3" required />
+                            <br><br>
+                            <label for="tipoTasa_3">Tipo de Tasa:</label>
+                            <select id="tipoTasa_3" required>
+                                <option value="comercial">Comercial</option>
+                                <option value="bancario">Bancario</option>
+                                <option value="racional">Racional</option>
+                                <option value="ideal">Ideal</option>
+                            </select>
+                            <br><br>
+                            <button type="submit">Calcular Descuento</button>
+                        </form>
+                        <div id="resultado_3"></div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4.Interés Compuesto -->
+            <section class="explore-section section-padding" id="section_2">
+                <div class="container">
+                    <div class="col-12 text-center">
+                        <h2 class="mb-4">Interés Compuesto</h1><hr><br>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                       <!-- CONTENIDO DE INTERÉS COMPUESTO -->
+                        <div class="container text-center">
+
+                            <label for="tipoCalculo">Tipo de Cálculo:</label>
+                            <select id="tipoCalculo">
+                            <option value="calcularS">Calcular S (Valor Futuro)</option>
+                            <option value="calcularP">Calcular P (Valor Presente)</option>
+                            </select> <br>
+
+                            <label for="valor">Valor (P o S):</label>
+                            <input type="number" id="valor4" placeholder="Ingresa el valor" /><br>
+
+                            <label for="tasa">Tasa de interés % (i):</label>
+                            <input type="number" id="tasa4" placeholder="Ej: 10" step="0.01" /><br>
+
+                            <label for="tiempo">Número de períodos (n):</label>
+                            <input type="number" id="tiempo4" placeholder="Ej: 3" /><br>
+
+                            <button onclick="calcularInteres()">Calcular Interes</button>
+
+                            <div id="resultado4"></div>
+                            <p class="nota">
+                            Nota: La tasa de interés (<strong>i</strong>) debe ser siempre una tasa efectiva, y el número de períodos (<strong>n</strong>) debe tener la misma periodicidad. Si no es así, utilice el conversor de tasas a continuación.
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 5.CONVERSOR DE TASAS -->
+            <section class="timeline-section section-padding" id="section_3">
+                <div class="section-overlay"></div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12 text-center">
+                            <h2 class="text-white mb-4">TASAS (CONVERSOR)</h1>
+                        </div>
+                        <div class="col-lg-10 col-12 mx-auto">
+
+                            <table class="text-white" style="width:100%;">
+                                <tr>
+                                    <td class="text-center" style="width:50%;">
+                                        <h4 class="text-white text-center">Tasa de Origen</h4>
+
+                                        <select id="tipoOrigen" class="text-center" style="width:80%;" >
+                                            <option value="i">Efectiva</option>
+                                            <option value="j">Nominal</option>
+                                        </select> <br>
+                                        <select id="periodoOrigen" class="text-center" style="width:80%;"></select>
+                                    </td>
+
+                                    <td class="text-center" style="width:50%">
+                                        <h4 class="text-white text-center">Tasa Destino</h4>
+                                        <select class="text-center" style="width:80%;" id="tipoDestino">
+                                            <option value="i">Efectiva</option>
+                                            <option value="j">Nominal</option>
+                                        </select><br>
+                                        <select class="text-center" style="width:80%;" id="periodoDestino"></select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" colspan="2">
+                                        <label>Valor de la Tasa Origen (%):</label>
+                                        <input type="number" id="valorTasa5" step="0.0001" placeholder="Ej: 12.5" required> <br>
+                                        <button onclick="convertirTasa()">Convertir Tasa</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" colspan="2">
+                                        <div class="resultado5" id="resultado5"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6.Ecuaciones de valor y Anualidades -->
+            <section class="faq-section section-padding" id="section_4">
+                <div class="container">
+                    <div class="row">
+
+                         <div class="col-12 text-center">
+                            <h2 class="mb-4">Ecuaciones de valor y Anualidades</h1> <br><br>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6 col-12 mx-auto">
+                                <h4 class="mb-3">Ecuaciones de valor</h4>
+
+                                <label>Tasa de Interés i - (%):</label>
+                                <input type="number" id="interes_6" step="0.0001" placeholder="Ej: 3"><br>
+
+                                <label>Fecha focal (periodo):</label>
+                                <input type="number" id="focal_6" placeholder="Ej: 12"><br><br>
+
+                                <h6>Valor desconocido (X)</h6>
+                                <label>Periodo de X (periodo):</label>
+                                <input style="width: 20%;" type="number" id="periodoX" placeholder="Ej: 18">
+                                <select id="tipoX">
+                                    <option value="deuda">Deuda</option>
+                                    <option value="pago">Pago</option>
+                                </select><br><br>
+
+                                <h5>Deudas</h5>
+                                <div id="deudas"></div>
+                                <center>
+                                    <button class="text-center" onclick="agregarFila('deudas')">Agregar deuda</button>
+                                </center>
+
+                                <h5>Pagos</h5>
+                                <div id="pagos"></div>
+                                <center>
+                                    <button onclick="agregarFila('pagos')">Agregar pago</button>
+                                
+
+                                    <br><button onclick="calcularValor()">Calcular valor de X</button>
+                                </center>
+                                <h3 id="resultado_6"></h3>
+                                <h4 id="detalle_6"></h4>
+                                <hr>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-12 mx-auto">
+                                <h4 class="mb-3">Anualidades</h4>
+
+                                <h6>Calculadora de Anualidades</h6>
+                                <div class="container">
+                                    <form id="formAnualidad">
+                                    <label for="tipo">Tipo de Anualidad:</label>
+                                    <select id="tipo" name="tipo" required>
+                                        <option value="ordinaria">Ordinaria o Vencida</option>
+                                        <option value="anticipada">Anticipada</option>
+                                        <option value="diferida">Diferida</option>
+                                        <option value="perpetua">Perpetua</option>
+                                        <option value="general">General</option>
+                                    </select><br>
+
+                                    <label for="calculo">¿Qué desea calcular?</label>
+                                    <select id="calculo" name="calculo" required>
+                                        <option value="P">Valor Presente (P)</option>
+                                        <option value="S">Valor Futuro (S)</option>
+                                    </select><br>
+
+                                    <label for="A">Valor del pago periódico (A):</label>
+                                    <input type="number" id="A" name="A" placeholder="Ej: 100000" required /><br>
+
+                                    <label for="i">Tasa de interés por período i (%):</label>
+                                    <input type="number" id="i" name="i" step="0.01" placeholder="Ej: 0.05" required /><br>
+
+                                    <label for="n">Número de períodos (n):</label>
+                                    <input type="number" id="n" name="n" placeholder="Ej: 10" required /><br>
+
+                                    <div id="kField" style="display: none;">
+                                        <label for="k">Períodos de diferimiento (k):</label>
+                                        <input type="number" id="k" name="k" placeholder="Ej: 2" /><br>
+                                    </div>
+
+                                    <button type="submit">Calcular</button><br>
+                                    </form>
+
+                                    <div class="resultado7" id="resultado7"></div>
+
+                                    <div class="nota">
+                                        Nota: En la anualidad perpetua solo se puede calcular el Valor Presente (P). Las tasas deben ser efectivas y los períodos deben coincidir con la periodicidad de la tasa.
+                                    </div>
+                                </div> <hr>
+                                
+                                <h6>Calcular el Pago Periódico (A)</h6>
+                                  <div class="container">
+
+                                    <form id="anualidadForm">
+                                    <label for="tipoAnualidad">Tipo de Anualidad:</label>
+                                    <select id="tipoAnualidad" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="ordinaria">Ordinaria o Vencida</option>
+                                        <option value="anticipada">Anticipada</option>
+                                        <option value="diferida">Diferida</option>
+                                        <option value="general">General</option>
+                                    </select>
+
+                                    <br><label for="tipoValor">¿A partir de qué quieres calcular A?</label>
+                                    <select id="tipoValor" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="presente">Valor Presente (P)</option>
+                                        <option value="futuro">Valor Futuro (S)</option>
+                                    </select>
+
+                                    <br><label for="valor_71">Ingrese el valor de P o S:</label>
+                                    <input type="number" step="any" id="valor_71" required placeholder="Ej: 1000000"/>
+
+                                    <br><label for="i_71">Tasa de interés por período i (%):</label>
+                                    <input type="number" step="any" id="i_71" required placeholder="Ej: 10"/>
+
+                                    <br><label for="n_71">Número de períodos (n):</label>
+                                    <input type="number" step="1" id="n_71" required placeholder="Ej: 1"/>
+
+                                    <div id="kContainer" style="display: none;">
+                                        <label for="k_71">Número de períodos de diferimiento (k):</label>
+                                        <input type="number" step="1" id="k_71" placeholder="Ej: 1" />
+                                    </div>
+
+                                    <button type="submit">Calcular A</button>
+                                    </form>
+
+                                    <div id="resultado_71"></div>
+                                </div>
+                                <hr>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7.Amortización -->
+            <section class="timeline-section section-padding" id="section_3">
+                <div class="section-overlay"></div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12 text-center">
+                            <h2 class="text-white mb-4">Amortización</h1>
+                        </div>
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <div class="timeline-container text-center">
+
+                                <!-- <h4 class="text-white mb-3">Search your favourite topic</h4> -->
+                                
+                                <label class="text-white">Valor Presente (P): <input type="number" id="valorPresente" placeholder="Ej: 5000000" required></label>
+                                <br><label class="text-white">Tasa de interés (%) mensual: <input type="number" id="tasaInteres" placeholder="Ej: 30" required></label>
+                                <br><label class="text-white">Plazo en meses (n): <input type="number" id="numPeriodos" placeholder="Ej: 2" required></label>
+                                <br><label class="text-white">Tipo de caso:
+                                    <select id="tipoCaso">
+                                    <option value="1">1 - Normal</option>
+                                    <option value="2">2 - Abono reduce tiempo</option>
+                                    <option value="3">3 - Abono reduce cuota</option>
+                                    </select>
+                                </label>
+
+                                <p class="text-white">Periodo del abono (solo caso 2 o 3): <input type="number" id="periodoAbono" placeholder="Ej: 2"></p>
+                                <p class="text-white">Valor del abono: <input type="number" id="valorAbono" placeholder="Ej: 2000000"></p>
+
+                                <button onclick="calcularAmortizacion()">Generar Tabla</button> <br><br>
+
+                                <center>
+                                    <table style="border: 1px solid #ccc;" id="tablaAmortizacion"></table>
+                                </center>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Capitalización -->
+            <section class="contact-section section-padding section-bg" id="section_5">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 text-center">
+                            <h2 class="mb-5">Capitalización</h2>
+                        </div>
+
+                        <div class="col-md-10  mx-auto">
+                              <div class="container text-center">
+                                <form id="capitalForm">
+                                    <p>Valor Futuro (S): <input type="number" id="s_9" required placeholder="Ej: 2000000"></p>
+                                    <p>Tasa de Interés (%): <input type="number" id="i_9" required placeholder="Ej: 8"></p>
+                                    <p>Períodos (n): <input type="number" id="n_9" required placeholder="Ej: 2"></p>
+                                    <button type="submit">Calcular</button><br>
+                                </form>
+                                <div id="resultado9"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <center>
+                        <div class="container">
+                            <a class="navbar-brand mb-2" href="index.html">
+                                <i class="bi-back"></i>
+                                <span>JS-Matemáticas Financieras</span>
+                            </a>
+                        </div>
+
+                        <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
+                        <br><br>Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution <a href="https://themewagon.com">ThemeWagon</a></p>
+
+                    </center>
+                        
+
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- JAVASCRIPT FILES -->
+         <script src="js/script.js"></script>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>

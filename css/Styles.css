@@ -1,0 +1,143 @@
+.index-block {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+.indice-pair {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#output {
+  margin-top: 20px;
+  background: #eef;
+  padding: 15px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  font-family: "Courier New", monospace;
+}
+
+#output_1 {
+  white-space: pre-wrap;
+}
+
+label {
+  display: inline;
+  margin-top: 10px;
+  border-radius: 10%;
+  font-size: 1.7cap
+}
+#resultado5{
+    font-size: 2.5cap;
+    margin-top: 10px;
+}
+input, select {
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 1cap;
+}
+
+input,select,button{
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: 4px;
+  margin-right: 4px;
+
+  border: none;
+  box-shadow: 0 0 5px 1px rgba(88, 88, 90, 0.295); /* sombra suave alrededor */
+  outline: none; /* elimina contorno azul */
+  padding: 8px;
+  border-radius: 10px;
+}
+
+button {
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 1cap;
+}
+button:hover {
+  color: white;
+  background-color: #0f0f0f79;
+  transform: scale(1.05);
+}
+
+
+
+
+
+#tablaAmortizacion {
+
+  border-radius: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  min-width: 320px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+#tablaAmortizacion thead {
+  background-color: #f4f4f4;
+}
+
+#tablaAmortizacion th,
+#tablaAmortizacion td {
+  padding: 10px 14px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+/* 🧮 Ajuste de ancho relativo */
+#tablaAmortizacion th:nth-child(1),
+#tablaAmortizacion td:nth-child(1) {
+  width: 10%; /* primera columna más angosta */
+}
+
+#tablaAmortizacion th:nth-child(n+2),
+#tablaAmortizacion td:nth-child(n+2) {
+  width: 22.5%;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  #tablaAmortizacion thead {
+    display: none;
+  }
+
+  #tablaAmortizacion,
+  #tablaAmortizacion tbody,
+  #tablaAmortizacion tr,
+  #tablaAmortizacion td {
+    display: block;
+    width: 100%;
+  }
+
+  #tablaAmortizacion tr {
+    margin-bottom: 12px;
+    border-bottom: 2px solid #ccc;
+    padding: 8px;
+  }
+
+  #tablaAmortizacion td {
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  #tablaAmortizacion td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 14px;
+    width: 45%;
+    font-weight: bold;
+    text-align: left;
+    white-space: nowrap;
+  }
+}
