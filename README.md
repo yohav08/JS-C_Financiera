@@ -23,10 +23,12 @@ Esta calculadora reúne múltiples herramientas útiles en el análisis financie
 
 ### 1. Clona este repositorio y descarga las dependencias
 
-Ejecuta el script en Git Bash, Linux o Mac (requiere `curl`):
 ```bash
 git clone https://github.com/yohav08/JS-C_Financiera.git
 cd JS-C_Financiera
+```
+Ejecuta el script en Git Bash, Linux o Mac (requiere `curl`):
+```bash
 bash install-deps.sh
 ```
 
