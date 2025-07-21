@@ -30,7 +30,7 @@ cd JS-C_Financiera
 bash install-deps.sh
 ```
 
-### 3. Consideraciones para previsualizar el proyecto localmente
+### 2. Consideraciones para previsualizar el proyecto localmente
 Usar un servidor local con Python, Abre una terminal en la carpeta raíz del proyecto y ejecuta el siguiente comando:
 
 ```bash
